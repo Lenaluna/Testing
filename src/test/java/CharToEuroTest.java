@@ -1,10 +1,9 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+// import static org.junit.jupiter.api.Assertions.assertNotNull;
+// import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
-import main.java.CharToEuro;
 
 /**
  * CharToEuroTest
@@ -12,7 +11,7 @@ import main.java.CharToEuro;
 public class CharToEuroTest {
 
     @Test
-    public void compare(){
+    public void testCompareChars(){
         CharToEuro euro= new CharToEuro();
         char signUnicode = '€';
         char signEuro = euro.getEuroSign();

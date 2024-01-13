@@ -1,4 +1,3 @@
-package main.java;
 
 public class CharToEuro {
   private char euroSign = '\u20AC';
