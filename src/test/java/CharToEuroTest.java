@@ -1,7 +1,5 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
-// import static org.junit.jupiter.api.Assertions.assertNotNull;
-// import static org.junit.jupiter.api.Assertions.assertTrue;
-
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import org.junit.jupiter.api.Test;
 
 
@@ -15,8 +13,7 @@ public class CharToEuroTest {
         CharToEuro euro= new CharToEuro();
         char signUnicode = '€';
         char signEuro = euro.getEuroSign();
-        // assertTrue(Character.isLetter(signUnicode));
+        assertFalse(Character.isLetter(signEuro));
         assertEquals(signEuro, signUnicode);
-        // assertNotNull(euro);
     }
 }
