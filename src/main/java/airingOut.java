@@ -1,23 +1,20 @@
-//A class that checks the conditions for ventilation.
-// If all windows and one door are open, a draft is created and the door slams shut.
+
+// Class that configures the front and back windows and a door in between
+// to open and close. If everything is open the door variable will be "closeDoor"
 public class airingOut {
+    String closeDoor = "Slam the door";
+    String openDoor = "Doesn't slam the door";
+    Door door;
 
-    //
-    String slamDoor = "Slam the door";
-    String doorStaysOpen = "Doesn't slam the door";
-
-
-public airingOut(){
-
-}
-
-//
-public String checkWindowsAndDoor(boolean frontWindowOpen, boolean backWindowOpen, boolean inDoorOpen) {
-    if (frontWindowOpen && backWindowOpen && inDoorOpen) {
-        return slamDoor;
+    public airingOut(Door door) {
+        this.door = door;
     }
-    else {
-        return doorStaysOpen;
+
+    public String checkWindowsAndDoor(boolean frontWindowOpen, boolean backWindowOpen) {
+        if (frontWindowOpen && backWindowOpen && door.isOpen()) {
+            return closeDoor;
+        } else {
+            return openDoor;
+        }
     }
-}
 }
